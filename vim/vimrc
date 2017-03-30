@@ -242,10 +242,11 @@ if has("autocmd")
 endif
 
 try
-  :source ~/repos/private/vimrc
+  :source ~/repos/personal/vimrc
 catch
   " no private vimrc, that's ok
 endtry
+
 
 noremap <up> :echoerr "Umm, use k instead"<CR>
 noremap <down> :echoerr "Umm, use j instead"<CR>

@@ -29,7 +29,6 @@ set -o notify
 set -o noclobber
 set -o ignoreeof
 set bell-style none
-set +h # disable hashing
 
 #---------------------------------- Path ----------------------------------
 
@@ -146,16 +145,6 @@ alias repos='cd "$HOME/repos"'
 alias root='sudo su -'
 alias skilstak='repo usr-share-skilstak'
 
-#------------------------------- Web Dev ----------------------------------
-
-if [ `which jade.js` ]; then
-    alias jade=jade.js
-fi
-
-if [ `which browser-sync` ]; then
-  alias bs="browser-sync start -s --no-ui --no-open -f '**/*'"
-fi
-
 #-------------------------- Bash Completion -------------------------------
 
 if [ $PLATFORM == bsd ]; then
@@ -199,7 +188,6 @@ alias promptemoji='export PS1="${EMOJI}\[${c_base1}\]\u\[$c_base01\]@\[$c_base00
 promptemoji
 
 #-------------------------------- Vim-ish ---------------------------------
-
 set -o vi
 
 if [ "`which vim 2>/dev/null`" ]; then
@@ -217,3 +205,7 @@ fi
 [ -e "$HOME/repos/personal/bashrc" ] && . "$HOME/repos/personal/bashrc" 
 [ -e "$HOME/repos/private/bashrc" ] && . "$HOME/repos/private/bashrc" 
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -3,7 +3,7 @@ new-session
 unbind C-b
 set -g prefix C-a
 bind-key C-a last-window
-set -g status off
+#set -g status off
 bind | split-window -h
 bind \ split-window -h
 bind - split-window -v

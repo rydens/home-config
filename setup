@@ -27,6 +27,7 @@ _links() {
   bash_completion
   bash_profile
   bashrc
+  profile
   vim
   dircolors
   "

@@ -26,6 +26,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'tfnico/vim-gradle'
 Plugin 'keith/swift.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'itchyny/lightline.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,7 +88,7 @@ set autoindent
 set nosmartindent
 set nocindent
 set autochdir
-set showmode
+set noshowmode
 set showcmd
 set hidden
 set wildmenu
@@ -257,3 +258,6 @@ inoremap <down> <NOP>
 inoremap <left> <NOP>
 inoremap <right> <NOP>
 
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ }
